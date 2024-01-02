@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* Class Selector */
+        .red {
+            background-color: red;
+        }
+
+        /* ID Selector */
+        #orange {
+            background-color: orange;
+        }
+
+        /*Child Selectors*/
+        /* if p is direct child inside div*/
+        div>p {
+            color: blue;
+            background-color: grey;
+        }
+
+        /* Descendant Selector* p should be inside div can be through any */
+        div p{
+            color: blue;
+            background-color: grey;
+        }  
+        
+        /* Universal Selectors*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selectors for links */
+        a:visited{
+            color: black;
+        }
+        a:link{
+            color: orange;
+        }
+
+        a:hover{
+            background-color: yellow;
+        }
+
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: black;
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid black;
+            height: 40px;
+        }
+        .box2{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to CSS </h1>
+
+    <div class="red"> i am div </div>
+    <div id="orange">
+         i am orange ID 
+        <p>i am para inside div</p>
+    </div>
+
+    <a href="https://www.google.com"> Go to Google</a>
+
+    <div class="box box1">I am first box</div>
+    <div class="box box2">I am another box</div>
+</body>
+
+</html>
