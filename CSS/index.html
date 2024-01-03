@@ -26,8 +26,10 @@
 
         /* Descendant Selector* p should be inside div can be through any */
         div p{
-            color: blue;
+            color: yellow;
             background-color: grey;
+            display: inline;
+            display: inline-block;  /* block if we want to apply padding and margin from all sides slso for width*/
         }  
         
         /* Universal Selectors*/
@@ -57,6 +59,10 @@
             margin: 20px;
             border: 2px solid black;
             height: 40px;
+            width: 200px; 
+            width: 80vw;    /*viewport width(vw) viewport height(vh)*/
+            margin:auto;
+            box-sizing: border-box;
         }
         .box2{
             color: red;
@@ -78,7 +84,15 @@
             text-overflow: ellipsis;
             overflow: hidden;
             color: #121212;
+            /*min-height: 80vh;*/
         }
+        .container{
+            font-size: 18;
+        }
+        .container p{
+            font-size: 2em; /*2em -> 2 times the font size from parent, font property will inheritate , i.e 18*2*/
+        }
+        /* vmin -> for desktop vmin is height and for mobile vmin is width */
     </style>
 </head>
 
@@ -97,7 +111,12 @@
     <div class="box box2">I am another box</div>
 
     <h1>Fonts</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, repudiandae.</p>
+
+    <div class="container">
+        <p class="container">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, repudiandae.</p>
+    </div>
+    
+    /* Remember the specificity */
 </body>
 
 </html>
