@@ -93,6 +93,45 @@
             font-size: 2em; /*2em -> 2 times the font size from parent, font property will inheritate , i.e 18*2*/
         }
         /* vmin -> for desktop vmin is height and for mobile vmin is width */
+
+        <!-- .box:first-child{
+            background-color: blueviolet;
+        } -->
+
+        .box::first-line{
+            background-color: blueviolet;
+        }
+
+        .boxes *{
+            color: black;
+            border: 2px solid gray;
+        }
+
+        [data-color = "primary"]{
+            margin-top: 45px;
+        }
+
+        .boxes:nth-child(even){
+            background-color: burlywood;
+        }
+
+        .boxes::before{
+            content: "I am Sanket, learning Web Development";
+        }
+
+        ::selection{
+            background-color: black;
+            color: yellow;
+        }
+
+        .box::first-letter{
+            color: bisque;
+            font-size: 25px;
+        }
+
+        input::placeholder{
+            color: brown;
+        }
     </style>
 </head>
 
@@ -117,6 +156,13 @@
     </div>
     
     /* Remember the specificity */
+
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ullam dolor consequuntur tempore animi recusandae quia incidunt minima debitis qui tenetur libero iure voluptates non harum ex cupiditate ducimus maxime tempora. Deleniti, dolorem magnam.</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Enter your Name here">
+    </div>
 </body>
 
 </html>
