@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .stick{
+            position: sticky;
+            top: 0;
+        }
+        .navigation{
+            background-color: plum;
+            display: flex;
+            list-style: none;
+            height: 60px;
+        }
+        .bar{
+            padding: 20px;
+        }
+
+        .yellow{
+            background-color: yellow;
+            padding: 55px 25px;
+            margin: 15px;
+        }
+
+        .brown{
+            background-color: brown;
+            height: 400px;
+            width: 280px;
+            margin: 20px 20px 20px 25px;
+            display: inline-block;
+        }
+        .purple{
+            background-color: purple;
+            height: 400px;
+            width: 280px;
+            margin: 20px 20px 20px 25px;
+            display: inline-block;
+        }
+        .rounded{
+            border: 2px solid black;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 10px 0px 0px 45px;
+        }
+        .message{
+            padding: 30px;
+        }
+
+        .footer{
+            height: 60px;
+            background-color: bisque;
+            margin: 20px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="stick">
+            <nav class="navigation">
+                <li class="bar">Home</li>
+                <li class="bar">Details</li>
+                <li class="bar">Orders</li>
+                <li class="bar">Contacts</li>
+            </nav>
+        </div>
+        
+
+        <div class="yellow">
+            <div class="brown"></div>
+            <div class="purple"></div>
+        </div>
+
+        <div class="rounded">
+            <h2 class="message">Maja toh aa rha hai sikhne mai. Lets learn web development</h2>
+        </div>
+
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
