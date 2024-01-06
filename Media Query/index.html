@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Query</title>
+    <style>
+        body{
+            background-color: rgb(255, 170, 0);
+        }
+
+        @media only screen and (max-width: 455px){
+            body{
+                background-color: aqua;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (orientation: landscape){
+            body{
+                border: 2px solid gray;
+            }
+        
+        }
+
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+           width: 344px;
+           height: 144px; 
+           background-color: rgb(0, 102, 255);
+           padding: 3px;
+           margin: 3px;
+        }
+
+        .cards{
+            border: 2px solid black;
+            display: flow-root;      /* will not overflow , will be inside container */
+        }
+        .card{
+            border: 2px solid red;
+        }
+
+        /* float and Clear */
+        .card:nth-of-type(2) {
+            background-color: aqua;
+            clear: left;            /* dont want any float element on left */
+        }
+        
+
+        img{
+            float: left;         /* Content will be on the right side */
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        Hey i am yellow body guy!
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="cards">
+        <img width="300px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV1rARdKWopb7On1bDS5hH5_7bjT7ZH1n1U-Fb-ysCpA&s" alt="Image">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo officia, maiores quaerat tempora a, numquam cum, aliquid quidem ut obcaecati facilis nesciunt facere?
+        </p>
+        <div class="card">Card 1</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi sed dignissimos neque dolorum deleniti corrupti perspiciatis nihil eos aperiam error, cumque necessitatibus qui et. Illum sapiente libero ducimus ipsa voluptate nobis animi? Voluptas fugit recusandae velit, porro reiciendis, atque blanditiis nam quos soluta reprehenderit iusto neque saepe ratione nostrum dolore iste, quas veniam quasi voluptatem. Odit, ratione. Obcaecati id libero consequuntur provident at nisi quidem aliquid corrupti. Itaque corporis in rerum porro facere perferendis. Neque error molestiae quod iure consequatur eum incidunt dolorum et, quo deserunt recusandae sunt, aspernatur iusto quis mollitia expedita. Nobis nulla dolorum voluptatem temporibus, omnis blanditiis, quisquam eligendi, incidunt architecto assumenda deserunt illo quo expedita repellendus. Vel voluptatibus autem perferendis eius cumque laborum vero nobis! Sint accusamus pariatur ipsum.</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>
