@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubling</title>
+    <style>
+        .child{
+            background-color: aqua;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+        .childContainer{
+            background-color: rgb(255, 255, 0);
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+        .container{
+            background-color: rgb(247, 0, 255);
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Event Bubbling will occur when we click on the child element, here when we click 
+        //on the child element then the event will bubble up to the parent element and then to the grandparent element and so on.
+        document.querySelector('.child').addEventListener('click', function(e){
+            // stop propagation will stop the event bubbling
+            e.stopPropagation();
+            alert('Child Clicked');
+        });
+        document.querySelector('.childContainer').addEventListener('click', function(e){
+            e.stopPropagation();
+            alert('Child Container Clicked');
+        });
+        document.querySelector('.container').addEventListener('click', function(){
+            alert('Container Clicked');
+        });
+
+        // setInterval -> It will call the function after a particular interval of time 
+        setInterval(() =>{
+            document.querySelector(".childContainer").style.background = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
+        }, 2000);
+        
+        // setTimeout -> It will call the function after a particular interval of time, but only once
+        setTimeout(() =>{
+            document.querySelector(".childContainer").style.background = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
+        }, 4000);
+    </script>
+</body>
+</html>
