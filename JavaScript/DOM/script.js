@@ -81,3 +81,10 @@ console.log(document.querySelector(".box").classList.add("box-1"));
 console.log(document.querySelector(".box").classList.remove("box-1"));
 // will toggle the class box-1 from the box
 console.log(document.querySelector(".box").classList.toggle("box-1"));
+
+// Events
+let button = document.getElementById("btn");
+button.addEventListener("click", function() {
+    // alert("Button Clicked");
+    document.querySelector(".box1").innerHTML = "<h2> Button Clicked </h2>";
+});
